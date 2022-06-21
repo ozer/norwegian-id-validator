@@ -104,7 +104,7 @@ impl NorwegianId {
     }
 }
 
-pub fn is_valid(id: &str) -> Result<bool, NorwegianIdValidationError> {
+fn is_valid(id: &str) -> Result<bool, NorwegianIdValidationError> {
     if id.len() != 11 {
         return Err(NorwegianIdValidationError::InvalidLength);
     }
